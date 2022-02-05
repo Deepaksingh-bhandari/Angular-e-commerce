@@ -1,0 +1,13 @@
+<div class="card m-3" style="width: 18rem;">
+    <div class="card-body">
+        <div class="card-img-top my-3 d-flex justify-content-center">
+            <img  [src]="product.image" class="product-image" alt="Product Image">
+        </div>
+        <h5 class="card-title overflow-hidden text-nowrap" >
+            {{product.title}}</h5>
+        <p class="card-text overflow-hidden text-nowrap" >
+            {{product.description}}</p>
+        <p ><strong>Price: </strong> {{product.price}}</p>
+        <button class="btn btn-primary w-100" (click)="addToCart(product)">Add to Cart</button>
+    </div>
+</div>

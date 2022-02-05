@@ -1,0 +1,41 @@
+<div class="container-fluid card-top">
+    <div class="d-flex ps-5">
+        <div class="item">
+            <a class="category-link" href="">
+                <img class="category-image "
+                    src="https://rukminim1.flixcart.com/flap/128/128/image/ab7e2b022a4587dd.jpg?q=100">
+                    <h6>All Products</h6>
+            </a>
+        </div>
+        <div class="item">
+            <a class="category-link" href="">
+                <img class="category-image "
+                    src="https://rukminim1.flixcart.com/flap/128/128/image/69c6589653afdb9a.png?q=100">
+                    <h6>Electronics</h6>
+                </a>
+        </div>
+        <div class="item">
+            <a class="category-link" href=""> <img class="category-image "
+                src="https://rukminim1.flixcart.com/flap/128/128/image/0ff199d1bd27eb98.png?q=100">
+                <h6>Appliances</h6>
+            </a>
+        </div>
+        <div class="item">
+            <a class="category-link" href="">
+                <img class="category-image "
+                    src="https://rukminim1.flixcart.com/flap/128/128/image/82b3ca5fb2301045.png?q=100">
+                    <h6>Fashion</h6>
+            </a>
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid py-0 card mt-3">
+    <div class="row">
+        <ng-container *ngFor="let prod of productStore;let i=index ">
+            <div class="col-lg-3 col-md-4 col-sm-6 ">
+                <app-product [product]=prod></app-product>
+            </div>
+        </ng-container>
+    </div>
+</div>

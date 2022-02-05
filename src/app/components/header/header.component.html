@@ -1,0 +1,32 @@
+<header class="sticky-md-top">
+  <nav class="navbar navbar-expand-sm navbar-dark bg-primary ">
+    <div class="container-fluid">
+      <a class="navbar-brand fs-3 " routerLink="/">
+        <span>
+          <fa-icon [icon]="['fas','truck-moving']" [styles]="{ color: 'white'}" size="lg"></fa-icon>
+        </span>
+        Un-Flipkart
+      </a>
+      <div class="navbar-nav me-auto mb-2 mb-lg-0 ">
+        <div class="nav-item ">
+          <form class=" d-flex my-2 my-lg-0 position-relative">
+            <input class="form-control me-sm-2" id="globalSearch" type="text" placeholder="Search for products, brands & more">
+            <fa-icon id="searchLogo" class="position-absolute" [icon]="['fas','search']" [styles]="{ color: '#0d6efd'}" size="lg"></fa-icon>
+          </form>
+        </div> 
+      </div>
+      <div class="nav-item me-0 ms-auto d-flex">
+        <a routerLink="/cart" class="position-relative ">
+          <fa-icon class="fs-4 nav-link" [icon]="['fas','cart-arrow-down']" [styles]="{ color: 'white' }" size="lg">
+          </fa-icon>
+          <span  id="cart-badge" class="position-absolute  translate-middle badge rounded-pill bg-danger" [ngClass]="{'visually-hidden':totalItem==0}">
+          {{totalItem}}
+        </span>
+      </a>
+      <span class="text-white fs-5 pt-3">Cart</span>
+      </div>
+    </div>
+  </nav>
+
+
+</header>
