@@ -9,21 +9,21 @@
       </a>
       <div class="navbar-nav me-auto mb-2 mb-lg-0 ">
         <div class="nav-item ">
-          <form class=" d-flex my-2 my-lg-0 position-relative">
-            <input class="form-control me-sm-2" id="globalSearch" type="text" placeholder="Search for products, brands & more">
-            <fa-icon id="searchLogo" class="position-absolute" [icon]="['fas','search']" [styles]="{ color: '#0d6efd'}" size="lg"></fa-icon>
+          <form (submit)="$event.preventDefault()" class=" d-flex my-2 my-lg-0 position-relative">
+            <input #globalSearch autocomplete="off" class="form-control me-sm-2" id="globalSearch" type="text" placeholder="Search for products, brands & more" (keyup)="filterProducts($event)">
+            <fa-icon id="searchLogo" class="position-absolute" [icon]="['fas','search']" [styles]="{ color: '#0d6efd'}" size="lg" (click)="filterProducts(globalSearch.value)"></fa-icon>
           </form>
         </div> 
       </div>
-      <div class="nav-item me-0 ms-auto d-flex">
-        <a routerLink="/cart" class="position-relative ">
-          <fa-icon class="fs-4 nav-link" [icon]="['fas','cart-arrow-down']" [styles]="{ color: 'white' }" size="lg">
+      <div routerLink="/cart" class="nav-item me-0 ms-auto d-flex align-items-center">
+        <a  class="position-relative ">
+          <fa-icon class="fs-4 nav-link p-1" [icon]="['fas','cart-arrow-down']" [styles]="{ color: 'white' }" size="lg">
           </fa-icon>
           <span  id="cart-badge" class="position-absolute  translate-middle badge rounded-pill bg-danger" [ngClass]="{'visually-hidden':totalItem==0}">
           {{totalItem}}
         </span>
       </a>
-      <span class="text-white fs-5 pt-3">Cart</span>
+      <span class="text-white fs-5">Cart</span>
       </div>
     </div>
   </nav>

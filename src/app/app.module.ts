@@ -11,14 +11,16 @@ import {fas} from '@fortawesome/free-solid-svg-icons'
 import {far} from '@fortawesome/free-regular-svg-icons'
 import {fab} from '@fortawesome/free-brands-svg-icons'
 import {HttpClientModule} from '@angular/common/http';
-import { ProductComponent } from './components/products/product/product.component'
+import { ProductComponent } from './components/products/product/product.component';
+import { CategoryPipe } from './pipes/category.pipe'
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     CartComponent,
     ProductsComponent,
-    ProductComponent
+    ProductComponent,
+    CategoryPipe
   ],
   imports: [
     BrowserModule,

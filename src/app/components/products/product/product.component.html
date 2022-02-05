@@ -8,6 +8,9 @@
         <p class="card-text overflow-hidden text-nowrap" >
             {{product.description}}</p>
         <p ><strong>Price: </strong> {{product.price}}</p>
-        <button class="btn btn-primary w-100" (click)="addToCart(product)">Add to Cart</button>
+        <div class="row">
+            <button class="btn btn-primary col-md-5 mx-2" (click)="addToCart(product)">Add to Cart</button>
+            <button class="btn btn-primary col-md-5" style="background-color:#ff5100" (click)="buyNow(product)">Buy Now</button>
+        </div>
     </div>
 </div>

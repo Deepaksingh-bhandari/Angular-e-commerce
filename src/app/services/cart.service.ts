@@ -52,8 +52,9 @@ export class CartService {
   }
   getTotalPrice() {
     this.cartItemList.map((elem) => {
-      this.grandTotal += elem.amount
+      this.grandTotal += elem.total
     })
+    return this.grandTotal
   }
   removeCartItem(id: number) {
     this.cartItemList = this.cartItemList.filter(elem => id === elem.id ? false : true)

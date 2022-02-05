@@ -20,4 +20,8 @@
 .category-link{
     text-decoration: none;
     color: black;
+    cursor: pointer;
+}
+.category-active{
+    border-bottom: 4px solid rgb(13,110,253)
 }
